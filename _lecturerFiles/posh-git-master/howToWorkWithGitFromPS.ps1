@@ -10,4 +10,4 @@ git commit -m "$(Get-Date)"
 git push origin master
 
 git config --global --unset-all
-# DO NOT FORGET TO DELETE STORED CREDENTIALS FROM Control Panel\User Accounts and Family Safety\Credential Manager
+cmdkey /delete:LegacyGeneric:target=git:https://github.com
