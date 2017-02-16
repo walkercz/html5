@@ -1,0 +1,74 @@
+body {
+    max-width: 960px;
+    margin: auto;
+    width: 96%;
+}
+
+p {
+    text-align: justify;
+}
+
+h1 {
+    color: green;
+}
+
+
+/* hack aby se responzivní obrázek načítal do okýnka, které je předrezervované */
+
+.responsive {
+    background-color: saddlebrown;
+    height: 0;
+    position: relative;
+    /* zajistí, aby se absolut zarovnávalo od tohoto prvku a ne od začátku stránky */
+}
+
+.r1 {
+    /* poměr stran obrázku, aby bylo správně předrezervované místo */
+    padding-bottom: 46.56%;
+    width: 100%;
+}
+
+.r2 {
+    /* poměr stran obrázku, aby bylo správně předrezervované místo */
+    padding-bottom: 56.24%;
+    width: 100%;
+}
+
+.r3 {
+    /* poměr stran obrázku, aby bylo správně předrezervované místo */
+    padding-bottom: 97.8%;
+    /*výška / šířka */
+    width: 100%;
+}
+
+.responsive img,
+.responsive object,
+.responsive svg {
+    /* aplikuje se na img zanořené v responsive prvku */
+    height: auto;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* absolut zajistí větší kompatibilitu a vykreslí obrázek jakoby nad všechny prvky */
+}
+
+#owl path {
+    stroke: green;
+}
+
+@media (min-width: 600px) {
+    h1 {
+        color: red;
+    }
+}
+
+@media (min-width: 600px) {
+    .column {
+        float: left;
+        box-sizing: border-box;
+        /* box-sizing nastavuje z čeho se bude počítat width i hight */
+        padding: 0 10px;
+        width: 50%;
+    }
+}

@@ -1,0 +1,71 @@
+#block1 {
+    background-color: firebrick;
+    height: 150px;
+    width: 150px;
+    transition: background-color 3000ms, width 1s;
+    /* transition: all 5s; */
+    /* transition-property: background-color, width;
+       transition-duration: 5s; */
+}
+
+#block1:hover {
+    background-color: darkturquoise;
+    width: 300px;
+}
+
+#block2 {
+    background-color: firebrick;
+    height: 150px;
+    width: 150px;
+    transition: background-color 3000ms, width 1s;
+    /* transition: all 5s; */
+    /* transition-property: background-color, width;
+       transition-duration: 5s; */
+}
+
+#block2.stav2 {
+    background-color: darkturquoise;
+    width: 300px;
+}
+
+#playground {
+    border: solid 1px black;
+    height: 300px;
+    width: 500px;
+    position: relative;
+}
+
+#playground:hover #ball2 {
+    animation-play-state: paused;
+}
+
+#ball,
+#ball2 {
+    animation: horizontal 10s linear, vertical 2.5s ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-color: lawngreen;
+    border-radius: 10px;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 0;
+    top: 280px
+}
+
+#ball2 {
+    background-color: cornflowerblue;
+    animation-delay: -1s;
+}
+
+@keyframes horizontal {
+    to {
+        left: 480px;
+    }
+}
+
+@keyframes vertical {
+    to {
+        top: 0;
+    }
+}

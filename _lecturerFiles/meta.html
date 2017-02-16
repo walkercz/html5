@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <meta name="viewport" content="width=600, initial-scale=1">
+  <title>Media query and meta tag</title>
+  
+  <style>
+
+  body {
+   width: 80%;
+  }
+
+  @media (min-width: 400px) {
+
+   h1 {
+    color: red;
+   }
+   
+  } 
+
+
+  </style>
+  
+  </head>
+  <body>
+
+   <h1>Media query and meta tag</h1>
+
+   <p>Lorem ipsum dolor sit amet consectetuer Aliquam sagittis mollis congue id. Neque justo Nunc amet nisl tellus lorem nibh et ac lorem. Elit id tellus velit libero eu felis adipiscing pretium id felis. Ornare enim pede ut quis Pellentesque mauris sem pretium justo et. Wisi interdum Integer auctor pretium nibh non est malesuada lacus condimentum. Molestie at magna ultrices turpis elit Aenean interdum ut congue nibh. Quisque enim nisl pede ut congue pede lorem vel Nullam quis. Justo Pellentesque tincidunt sem libero rhoncus.</p>
+   <p>Ut at nunc cursus malesuada fermentum nunc congue Integer Integer Curabitur. Vestibulum a egestas Pellentesque pede laoreet a Phasellus Sed cursus quis. Vel odio enim ligula Curabitur amet Proin sit non nonummy pretium. Lobortis Aenean nec mattis Mauris egestas Curabitur pulvinar auctor Donec ante. Nullam elit Proin urna semper Proin condimentum wisi urna ut mauris. Nam nulla nibh est.</p>
+   <p>Sagittis neque felis sit Suspendisse platea lobortis quis est at auctor. Et sed est tellus ornare sed lacinia lorem id consectetuer eros. In semper in convallis malesuada sagittis sit nec eu urna lacinia. Vel id est Nullam interdum dictum semper Curabitur libero Suspendisse morbi. Eros urna orci at felis eu nec ligula massa laoreet id. Aliquam sed ut nonummy pede ullamcorper commodo Maecenas enim eu convallis. Rhoncus sollicitudin eu Curabitur sociis justo cursus risus dictum Vestibulum consequat. Justo.</p>
+   <p>Quisque tempor elit pretium libero sodales pede nibh faucibus enim Pellentesque. Phasellus rhoncus nibh pellentesque hac sit Curabitur sem lacus orci wisi. Quis Lorem laoreet dignissim et purus magnis velit et ac hendrerit. Phasellus elit tincidunt tristique id et lacinia ultrices at nunc gravida. Id vitae scelerisque enim a lorem ac odio gravida Maecenas Nulla. Lorem ac Integer risus vitae.</p> 
+
+   <script type="text/javascript">
+
+    var stylesheet = document.styleSheets[0];
+    var rules = stylesheet.cssRules;
+    
+    console.log(rules.length);
+    console.log(rules[1].type);  // media rule
+    
+    //stylesheet.deleteRule(1);
+    
+    console.log(rules.length);
+
+   </script>
+
+  </body>
+</html>
