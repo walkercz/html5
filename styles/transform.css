@@ -1,7 +1,44 @@
 #obr {
     /* transform: translate(100px, 0); */
     /* transform: rotate(45deg); */
-    transform: translate(100px, 0) rotate(45deg) scale(-0.6, 1.5);
+    /* transform: translate(100px, 0) rotate(45deg) scale(-0.6, 1.5); */
     /* záleží na pořadí */
     /* transform: scale(0.6); */
+    /* transform: perspective(600px) rotateY(45deg); */
+    backface-visibility: hidden;
+    /* pokud se obrázek otočí o více než 90deg není vidět */
+    transform: perspective(600px) rotateY(-45deg) translate(100px, 0) rotate(45deg) scale(-0.6, 1.5);
+}
+
+#card {
+    position: relative;
+    height: 208px;
+    width: 300px;
+}
+
+#card img {
+    background-color: darkgoldenrod;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: transform 6s;
+}
+
+#front {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+#back {
+    transform: perspective(600px) rotateY(-179.9deg);
+    /* black magic pro optimalizaci některých prohlížečů, které nedávají 180deg */
+}
+
+#card:hover #front {
+    transform: perspective(600px) rotateY(179.9deg);
+    /* black magic pro optimalizaci některých prohlížečů, které nedávají 180deg */
+}
+
+#card:hover #back {
+    transform: perspective(600px) rotateY(-0deg);
 }
