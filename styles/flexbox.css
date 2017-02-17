@@ -1,0 +1,85 @@
+#container1 {
+    background-color: lightcoral;
+    border: solid 3px orangered;
+    /* display: inline-block; */
+}
+
+#container1>div {
+    background-color: cadetblue;
+    height: 200px;
+    width: 200px;
+    float: left;
+}
+
+#container1 .bigger {
+    height: 300px;
+    background-color: olivedrab;
+}
+
+
+/*
+.clear {
+    clear: both;
+}
+*/
+
+.clearfix:after {
+    /* jedna z cest jak automaticky nastavovat velikost containeru, aby neměl výšku 0px */
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#container2 {
+    background-color: lightcoral;
+    border: solid 3px orangered;
+    text-align: center;
+}
+
+#container2>div {
+    background-color: cadetblue;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#container2 .bigger {
+    height: 300px;
+    background-color: olivedrab;
+}
+
+#container3 {
+    background-color: lightcoral;
+    border: solid 3px orangered;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-wrap: wrap;
+}
+
+#container3>div {
+    background-color: cadetblue;
+    height: 200px;
+    /* width: 200px; */
+}
+
+#container3 .bigger {
+    height: 300px;
+    background-color: olivedrab;
+}
+
+#container3 #f1 {
+    order: 1;
+    flex: 1;
+    background-color: peachpuff;
+}
+
+#f2 {
+    order: 0;
+    width: 200px;
+}
+
+#f3 {
+    order: 2;
+    width: 200px;
+}
