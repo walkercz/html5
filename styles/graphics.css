@@ -1,10 +1,52 @@
+@font-face {
+    font-family: 'DroidSans-Bold-webfont';
+    src: url('../fonts/DroidSans-Bold-webfont.eot');
+    src: url('../fonts/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/DroidSans-Bold-webfont.woff') format('woff'), url('../fonts/DroidSans-Bold-webfont.ttf') format('truetype'), url('../fonts/DroidSans-Bold-webfont.svg#DroidSans-Bold-webfont') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "DroidSans-Bold-webfont", serif
+}
+
 body {
     background-color: sandybrown;
+    background-image: url('../images/kocka.png'), url('../images/koza.png');
+    background-repeat: no-repeat;
+    background-position: top right, top left;
+    padding: 0 250px;
 }
 
 #p1 {
     background-color: darkturquoise;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(orangered), to(lightcyan));
+    background-image: -webkit-linear-gradient(top, orangered, lightcyan);
+    background-image: -moz-linear-gradient(top, orangered, lightcyan);
+    background-image: linear-gradient(to right, orangered, orangered 5%, lightcyan 5%, lightcyan 95%, red 98%, red);
     border-radius: 10px 0;
-    padding: 10px;
+    padding: 10px 7%;
     width: 500px;
+    box-shadow: 0px 10px 20px -10px black;
+}
+
+#p2 {
+    height: 186px;
+    width: 400px;
+    background-color: plum;
+    background-image: url('../images/praha400.jpg');
+    background-position: 50% 50%;
+    /* background-size: contain; */
+    /* pro zhuštění pixelů např na nové ipady */
+}
+
+@media (min-resolution: 2dppx),
+(min-resolution: 192dpi),
+(-webkit-min-device-pixel-ration: 2.0) {
+    #p2 {
+        background-image: url('../images/praha.jpg');
+        background-position: 50% 50%;
+        background-size: contain;
+        /* pro zhuštění pixelů např na nové ipady */
+    }
 }
