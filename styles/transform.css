@@ -42,3 +42,63 @@
 #card:hover #back {
     transform: perspective(600px) rotateY(-0deg);
 }
+
+
+/* 3D transformations */
+
+#scene {
+    background-image: url(../images/mrizka-velka.gif);
+    height: 400px;
+    width: 600px;
+    position: relative;
+    perspective: 600px;
+    perspective-origin: 100% 0;
+}
+
+#object {
+    /* background-color: red; */
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    /* transform: translate3d(0, 0, -600px); */
+    transform-style: preserve-3d;
+    /* transform: rotateY(-30deg);*/
+    animation: rotation 4s infinite linear;
+}
+
+@keyframes rotation {
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+#object div {
+    background-color: rgba(255, 110, 0, 0.5);
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    color: white;
+    font-size: 180px;
+    font-weight: bold;
+    line-height: 200px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#object div:nth-child(1) {
+    transform: rotateY(0) translate3d(0, 0, 100px);
+}
+
+#object div:nth-child(2) {
+    transform: rotateY(90deg) translate3d(0, 0, 100px);
+}
+
+#object div:nth-child(3) {
+    transform: rotateY(180deg) translate3d(0, 0, 100px);
+}
+
+#object div:nth-child(4) {
+    transform: rotateX(90deg) translate3d(0, 0, 100px);
+}
