@@ -10,5 +10,5 @@ git add .
 git commit -m "$(Get-Date)"
 git push origin master
 
-git config --global --unset-all
+#git config --global --unset-all
 cmdkey /delete:LegacyGeneric:target=git:https://github.com
