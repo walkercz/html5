@@ -1,0 +1,43 @@
+body {
+    width: 50%;
+    margin: 0 auto;
+}
+
+header,
+footer {
+    background-color: indigo;
+    color: ghostwhite;
+}
+
+
+/*
+video {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+*/
+
+.responsive {
+    background-color: saddlebrown;
+    height: 0;
+    position: relative;
+    /* zajistí, aby se absolut zarovnávalo od tohoto prvku a ne od začátku stránky */
+}
+
+.responsive video {
+    /* aplikuje se na img zanořené v responsive prvku */
+    height: auto;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* absolut zajistí větší kompatibilitu a vykreslí obrázek jakoby nad všechny prvky */
+}
+
+.r1 {
+    /* poměr stran obrázku, aby bylo správně předrezervované místo */
+    padding-bottom: 56.25%;
+    /* (360 / 640) * 100 */
+    width: 100%;
+}
